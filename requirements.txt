@@ -37,7 +37,6 @@ inflection
 jupyter-dash
 lambdaprompt
 langdetect
-lightgbm
 llvmlite
 mathparse
 mccabe
