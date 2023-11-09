@@ -112,7 +112,7 @@ def predict_file(contents):
         result = np.expm1(predictions).round(2)
         uploaded_data["Predictions"] = result
         # saving the dataframe
-        uploaded_data.to_csv('C:\\Users\\USER\\Desktop\\WORKPLACE\\HAMOYE INTERSHIP CODES\\Premier project\Hamoye_Pred.csv')
+        uploaded_data.to_csv('Hamoye_Pred.csv')
 
         
         # Display the predictions as HTML or in a table
