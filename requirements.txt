@@ -1,6 +1,4 @@
 absl-py
-anaconda-client
-anaconda-navigator
 annotated-types
 ansi2html
 appdirs
