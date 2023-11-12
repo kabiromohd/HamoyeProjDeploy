@@ -11,6 +11,9 @@ import io
 # Initialize your Dash app
 app = dash.Dash(__name__)
 
+# Create server variable with Flask server object for use with gunicorn
+server = app.server # Flask server
+
 # Define the app layout
 
 app.layout = html.Div([
@@ -132,4 +135,4 @@ def download_file(n_clicks):
     )
 
 if __name__ == '__main__':
-    app.run(debug=True, jupyter_mode="tab", port='8896')
+    app.run_server(debug=True, jupyter_mode="tab", port='8896')
