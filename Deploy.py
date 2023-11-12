@@ -3,11 +3,9 @@
 
 # In[21]:
 
-
+import os
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
+from dash import Dash, Input, Output, State, dcc, html, callback
 import pandas as pd
 import pickle
 import numpy as np
@@ -111,13 +109,19 @@ def predict_file(contents):
         predictions = model.predict(df)
         result = np.expm1(predictions).round(2)
         uploaded_data["Predictions"] = result
+        
         # saving the dataframe
-        uploaded_data.to_csv('Hamoye_Pred.csv')
+        # Define the local directory 
+        save_directory = os.getcwd()  # Update with your directory path
+        csv_file_path = os.path.join(save_directory, "Hamoye_Pred.csv")
+
+        # Save the DataFrame to a CSV file locally
+        uploaded_data.to_csv(csv_file_path, index=False)
 
         
         # Display the predictions as HTML or in a table
         return html.Div([
-            html.H4('Predicted values SAVED to disk as "Hamoye_Pred.csv".'),
+            html.H4(f'Predicted values SAVED to disk to path: {csv_file_path}'),
             html.Table(
     
                 # Create a table or HTML element to display the predictions
