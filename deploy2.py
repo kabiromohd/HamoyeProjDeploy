@@ -135,4 +135,4 @@ def download_file(n_clicks):
     )
 
 if __name__ == '__main__':
-    app.run_server(debug=True, jupyter_mode="tab", port='8896')
+    app.run_server(debug=True, jupyter_mode="tab", port='8996')
