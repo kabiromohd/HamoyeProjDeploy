@@ -135,4 +135,4 @@ def predict_file(contents):
         return 'Upload a file to make predictions'
 
 if __name__ == '__main__':
-    app.run_server(debug = True, jupyter_mode="tab", port = '8896')
+    app.run_server(debug = True, jupyter_mode="tab", port = '8996')
