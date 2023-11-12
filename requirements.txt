@@ -59,7 +59,6 @@ pyasn1-modules
 PyAutoGUI
 pycosat
 pycountry
-pycurl
 PyDispatcher
 PyGetWindow
 pyls-spyder
