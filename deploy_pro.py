@@ -10,6 +10,8 @@ import io
 # Initialize your Dash app
 app = Dash(__name__)
 
+# Create server variable with Flask server object for use with gunicorn
+server = app.server # Flask server
 
 # Define the app layout
 app.layout = html.Div([
@@ -134,4 +136,4 @@ def preprocess_data(uploaded_data, le):
     return df
 
 if __name__ == '__main__':
-    app.run(debug=True, jupyter_mode="tab", port='8896')
+    app.run_server(debug=True, jupyter_mode="tab", port='8896')
