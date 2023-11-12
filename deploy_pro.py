@@ -136,4 +136,4 @@ def preprocess_data(uploaded_data, le):
     return df
 
 if __name__ == '__main__':
-    app.run_server(debug=True, jupyter_mode="tab", port='8896')
+    app.run_server(debug=True, jupyter_mode="tab", port='8796')
