@@ -55,7 +55,6 @@ Pillow
 Pint
 pivottablejs
 protobuf
-psycopg2
 pyasn1-modules
 PyAutoGUI
 pycosat
